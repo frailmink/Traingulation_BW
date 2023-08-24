@@ -1,0 +1,34 @@
+{
+    "name": "createPoint",
+    "maps": [
+        {
+            "name": "point",
+            "id": "27fb1ff8-0859-4f1e-81ce-702136504583",
+            "actions": [
+                {
+                    "name": "add",
+                    "type": "Button",
+                    "id": "22430d42-9402-4eb1-b9e1-8834389bcfa4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4ac1385a-d45e-4cf7-b432-70e816e6d160",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "add",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
