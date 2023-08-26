@@ -31,8 +31,11 @@ public class projectManagerScript : MonoBehaviour
         }
     }
 
-    private triangle supraTraingle;
-    
+    private triangle supraTraingle = new triangle();
+    public Vector2 supA;
+    public Vector2 supB;
+    public Vector2 supC;
+
     private CreatePoint input;
     private InputAction addPoint;
     public GameObject point;
@@ -46,6 +49,10 @@ public class projectManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        supraTraingle.SetPoints(supA, supB, supC);
+
+        DrawLines(supraTraingle.GetPoints());
+
         input = new CreatePoint();
 
         addPoint = input.point.add;
@@ -72,10 +79,6 @@ public class projectManagerScript : MonoBehaviour
         mWorldPos = Camera.main.ScreenToWorldPoint(mPos);
         points.Add(mWorldPos);
         Instantiate(point, mWorldPos, transform.rotation);
-        // linePoints = new List<Vector2>();
-        // linePoints.Add(points[points.Count - 1]);
-        // linePoints.Add(points[points.Count - 2]);
-        // linePoints.Add(points[points.Count - 3]);
     }
 
     private void DrawLines(List<Vector2> linePoints)
